@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="425.0" style="-fx-background-color: light-blue;" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HandlerLogin">
+    <children>
+        <ImageView fx:id="boxImage" fitHeight="73.0" fitWidth="70.0" layoutX="178.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@imgs/E724F150-B714-4E17-B28D-72420E769992.png" />
+            </image>
+        </ImageView>
+        <JFXButton fx:id="btn_login" buttonType="RAISED" defaultButton="true" layoutX="225.0" layoutY="240.0" onAction="#on_btn_login_clicked" prefHeight="37.0" prefWidth="115.0" ripplerFill="#9ccde8" style="-fx-background-color: #248fcd;" text="Login" textFill="WHITE">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="12.0" />
+            </font></JFXButton>
+        <JFXTextField fx:id="text_id" layoutX="102.0" layoutY="111.0" prefHeight="25.0" prefWidth="216.0" promptText="Your ID here...." />
+        <JFXPasswordField fx:id="text_pass" layoutX="105.0" layoutY="159.0" prefHeight="25.0" prefWidth="216.0" promptText="Your password here...." />
+        <JFXRadioButton fx:id="doctorRadioButton" layoutX="172.0" layoutY="207.0" onAction="#on_doctor_pressed" text="Doctor" />
+        <JFXRadioButton fx:id="patientRadioButton" layoutX="269.0" layoutY="207.0" onAction="#on_patient_pressed" selected="true" text="Patient" />
+      <Text layoutX="96.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login As:" />
+      <JFXButton fx:id="btn_exit" buttonType="RAISED" defaultButton="true" layoutX="92.0" layoutY="240.0" onAction="#on_btn_exit_clicked" prefHeight="37.0" prefWidth="115.0" ripplerFill="#e06839" style="-fx-background-color: #e06839;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_close" layoutX="399.0" layoutY="1.0" onAction="#on_btn_exit_clicked" prefHeight="17.0" prefWidth="19.0" text="x" />
+    </children>
+</Pane>

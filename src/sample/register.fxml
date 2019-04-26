@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HandlerReg">
+   <children>
+      <Label fx:id="greatingLabel" layoutX="69.0" layoutY="23.0" text="Hello, Mike!">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+       <TableView fx:id="table_patreg" layoutX="228.0" layoutY="78.0" prefHeight="357.0" prefWidth="587.0">
+           <columns>
+               <TableColumn fx:id="col_regnum" prefWidth="40.0" text="编号" />
+               <TableColumn fx:id="col_regname" prefWidth="80.0" text="号种名称" />
+               <TableColumn fx:id="col_docnum" prefWidth="80.0" text="医生编号" />
+               <TableColumn fx:id="col_docname" prefWidth="80.0" text="医生姓名" />
+               <TableColumn fx:id="col_regcount" prefWidth="80.0" text="有效人数" />
+               <TableColumn fx:id="col_regcost" prefWidth="40.0" text="号价" />
+               <TableColumn fx:id="col_unreg" prefWidth="80" text="退号标志" />
+               <TableColumn fx:id="col_regtime" prefWidth="106.0" text="挂号时间" />
+           </columns>
+       </TableView>
+      <JFXButton fx:id="btn_clearsel" buttonType="RAISED" layoutX="600.0" layoutY="461.0" onAction="#on_clearsel_clicked" prefHeight="33.0" prefWidth="92.0" ripplerFill="#9ccde8" style="-fx-background-color: #cf4d1b;" text="Delete All" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_unreg" buttonType="RAISED" layoutX="724.0" layoutY="461.0" onAction="#on_btn_unreg_clicked" prefHeight="33.0" prefWidth="92.0" ripplerFill="#9ccde8" style="-fx-background-color: #248fcd;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="deptBox" editable="true" layoutX="14.0" layoutY="78.0" prefHeight="28.0" prefWidth="188.0" promptText="科室名称" />
+      <JFXComboBox fx:id="doctBox" editable="true" layoutX="14.0" layoutY="137.0" prefHeight="28.0" prefWidth="188.0" promptText="医生姓名" />
+      <JFXComboBox fx:id="typeBox" editable="true" layoutX="14.0" layoutY="205.0" prefHeight="28.0" prefWidth="188.0" promptText="号种类别" />
+      <JFXComboBox fx:id="nameBox" editable="true" layoutX="14.0" layoutY="274.0" prefHeight="28.0" prefWidth="188.0" promptText="号种名称" />
+      <JFXButton fx:id="btn_ok" buttonType="RAISED" layoutX="129.0" layoutY="396.0" onAction="#on_btn_ok_clicked" prefHeight="33.0" prefWidth="61.0" ripplerFill="#9ccde8" style="-fx-background-color: #248fcd;" text="挂号" textFill="WHITE">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_clear" buttonType="RAISED" layoutX="22.0" layoutY="396.0" onAction="#on_btn_clear_clicked" prefHeight="33.0" prefWidth="61.0" ripplerFill="#cf4d1b" style="-fx-background-color: #cf4d1b;" text="取消" textFill="WHITE">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_exit" buttonType="RAISED" layoutX="26.0" layoutY="466.0" onAction="#on_btn_exit_clicked" prefHeight="18.0" prefWidth="53.0" ripplerFill="#9ccde8" style="-fx-background-color: #8d8886;" text="退出" textFill="WHITE">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="feeTextLabel" layoutX="22.0" layoutY="357.0" prefHeight="24.0" prefWidth="62.0" text="应缴金额" />
+      <Label fx:id="feeLabel" layoutX="88.0" layoutY="357.0" prefHeight="24.0" prefWidth="71.0" text="20yuan" />
+      <Label fx:id="accountTextLabel" layoutX="22.0" layoutY="325.0" prefHeight="24.0" prefWidth="62.0" text="账户余额" />
+      <Label fx:id="accountLabel" layoutX="88.0" layoutY="325.0" prefHeight="24.0" prefWidth="61.0" text="100.00元" />
+      <Label fx:id="lblWorning" layoutX="228.0" layoutY="14.0" textFill="#cd0101">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="resultLabel" layoutX="228.0" layoutY="15.0" textFill="#3bb20c" />
+      <JFXButton layoutX="813.0" layoutY="1.0" onAction="#on_btn_exit_clicked" prefHeight="27.0" prefWidth="27.0" text="x" />
+      <ImageView fitHeight="33.0" fitWidth="43.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/E724F150-B714-4E17-B28D-72420E769992.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>
