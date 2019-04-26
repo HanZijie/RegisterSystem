@@ -2,7 +2,7 @@
 华中科技大学 第二次java实验
 
 ## 开发环境
-IntelliJ
+IntelliJ<br>
 JFeonix 9.0.4
 MySql-connector
 
